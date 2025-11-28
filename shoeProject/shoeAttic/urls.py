@@ -4,4 +4,5 @@ from . import views # import veiws from the current root directory
     # endpoints + target view functions
 urlpatterns = [
         path('home', views.home, name='home'), # endpoint for home page
+        path('create-Shoe', views.createShoe, name='create-Shoe'),
     ]
