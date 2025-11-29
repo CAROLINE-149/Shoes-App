@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 from django.shortcuts import render,redirect
 
 from django.http import HttpResponse
 from .forms import shoeForm
 from .models import Shoe
+=======
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .forms import ShoeForm 
+>>>>>>> c09a507ea825e346f973d2081cb1d24e8ffa8931
 # Create your views here.
 def home(request): 
         return render(request, 'shoeAttic/home.html ')
 # Create your views here.
 def createShoe(request):
+<<<<<<< HEAD
     form = shoeForm()
+=======
+    form = ShoeForm()
+>>>>>>> c09a507ea825e346f973d2081cb1d24e8ffa8931
 
     if request.method == "POST":
         form = shoeForm(request.POST) # gets the data from what the user has input
@@ -16,6 +26,7 @@ def createShoe(request):
             form.save()
             return redirect("readShoe")
     context = {"form": form}
+<<<<<<< HEAD
     return render(request, "shoeAttic/forms.html", context)
 
 def readShoe(request):
@@ -50,3 +61,6 @@ def deleteShoe(request, pk):
         return redirect("readShoe")
     context ={"shoes":shoe}
     return render(request, "shoeAttic/delete.html", context)
+=======
+    return render(request, "shoeAttic/forms.html", context)
+>>>>>>> c09a507ea825e346f973d2081cb1d24e8ffa8931
