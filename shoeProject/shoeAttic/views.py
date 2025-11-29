@@ -3,11 +3,15 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .forms import shoeForm
 from .models import Shoe
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .forms import ShoeForm 
 # Create your views here.
 def home(request): 
         return render(request, 'shoeAttic/home.html ')
 # Create your views here.
 def createShoe(request):
+    form = shoeForm()
     form = shoeForm()
 
     if request.method == "POST":
