@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .forms import ShoeForm 
 # Create your views here.
 def home(request): 
         return render(request, 'shoeAttic/home.html ')
 # Create your views here.
-def createMountain(request):
+def createShoe(request):
     form = ShoeForm()
 
     if request.method == "POST":
@@ -14,4 +15,4 @@ def createMountain(request):
             return redirect("readShoe")
             
     context = {"form": form}
-    return render(request, "shoeAttic", context)
+    return render(request, "shoeAttic/forms.html", context)
