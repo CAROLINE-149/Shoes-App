@@ -1,5 +1,4 @@
 from django.shortcuts import render,redirect
-
 from django.http import HttpResponse
 from .forms import shoeForm
 from .models import Shoe
@@ -13,6 +12,7 @@ def home(request):
 def createShoe(request):
     form = shoeForm()
     form = ShoeForm()
+    form = shoeForm()
 
     if request.method == "POST":
         form = shoeForm(request.POST) # gets the data from what the user has input
