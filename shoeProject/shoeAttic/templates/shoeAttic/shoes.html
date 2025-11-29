@@ -1,0 +1,30 @@
+{%extends 'main.html'%} {% block content%}
+<h1 class="container display-1 container fw-bold text-success">
+  <span class="border border-black bg-white">Shoe</span
+  ><span class="bg-success text-white">Attic</span>
+</h1>
+<h2 class="lead text-success">Welcome to your world of shoes</h2>
+<div>
+  {% for shoes in shoes%}
+  <div class="my-5 py-4">
+    <img src="{{shoes.image}}" alt="shoe image" />
+    <div class="display-3 fw-bold">{{shoes.brand}}</div>
+    <div class="lead text-success fw-semibold">{{shoes.model}}</div>
+    <div class="fs-3">
+      <span class="badge bg-success text-light px-2">Size</span
+      >&nbsp;{{shoes.size}}
+    </div>
+    <div class="fs-3">
+      <span class="badge bg-success text-light px-2">Price</span
+      >&nbsp;{{shoes.price}}
+    </div>
+    <br />
+    <a href="{% url 'shoe_detail' shoes.pk %}"class=" badge bg-success text-decoration-none text-light">View Details</a>
+    <a href="{% url 'updateShoe' shoes.pk %}" class=" badge bg-success text-decoration-none text-light">Update Shoe</a>
+    <a href="{% url 'deleteShoe' shoes.pk %}" class=" badge bg-success text-decoration-none text-light">Delete Shoe</a>
+    <a href="{% url 'createShoe'%}" class=" badge bg-success text-decoration-none text-light">Add Shoe</a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock%}

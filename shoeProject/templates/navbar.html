@@ -1,6 +1,14 @@
 <nav class="navbar navbar-expand-lg bg-success">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <style>
+      .classic {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+    </style>
+    <a class="navbar-brand" href="{% url 'readShoe' %}"><img src="shoeProject\templates\assets\svg\logo.svg" alt="logo" class="classic">
+    </a>
     <button
       class="navbar-toggler"
       type="button"

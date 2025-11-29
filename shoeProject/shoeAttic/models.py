@@ -1,6 +1,8 @@
 from django.db import models
 
+# Create your models here.
 class Shoe(models.Model):
+    image = models.CharField(max_length=400)
     brand = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
     size = models.IntegerField()
@@ -9,4 +11,3 @@ class Shoe(models.Model):
     def __str__(self):
         return f"{self.brand} {self.model}"
 
-# Create your models here.

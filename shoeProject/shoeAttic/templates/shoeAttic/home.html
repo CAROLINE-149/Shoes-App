@@ -4,4 +4,20 @@
   ><span class="bg-success text-white">Attic</span>
 </div>
 
+<section class="bg-success text-white text-center py-5 my-5">
+  <div class="container">
+    <h1 class="display-3 fw-bold">Welcome to <span class="bg-white text-success px-2">Shoe Attic</span></h1>
+    <p class="lead mt-3">Discover your world of shoes — stylish, affordable, and made for every step.</p>
+    <a href="{% url 'readShoe' %}" class="btn btn-light btn-lg mt-4">View your Shoe</a>
+  </div>
+</section>
+
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-success">Step Into Style Today</h2>
+    <p class="lead">Browse our collection or add your own shoes to the attic.</p>
+    <a href="{% url 'createShoe' %}" class="btn btn-success btn-lg">Get Started</a>
+  </div>
+</section>
+
 {% endblock%}

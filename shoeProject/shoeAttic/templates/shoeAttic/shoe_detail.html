@@ -1,0 +1,17 @@
+{%extends 'main.html'%}
+{% block content%}
+<div class="my-5 py-4">
+    <img src="{{shoes.image}}" alt="shoe image" />
+    <div class="display-3 fw-bold">{{shoes.brand}}</div>
+    <div class="lead text-success fw-semibold">{{shoes.model}}</div>
+    <div class="fs-3">
+      <span class="badge bg-success text-light px-2">Size</span
+      >&nbsp;{{shoes.size}}
+    </div>
+    <div class="fs-3">
+      <span class="badge bg-success text-light px-2">Price</span
+      >&nbsp; KES {{shoes.price}}
+    </div>
+</div>
+
+{% endblock%}
