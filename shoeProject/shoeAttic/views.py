@@ -1,7 +1,22 @@
+<<<<<<<<< Temporary merge branch 1
+<<<<<<< HEAD
+=========
+>>>>>>>>> Temporary merge branch 2
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .forms import shoeForm
 from .models import Shoe
+<<<<<<<<< Temporary merge branch 1
+=======
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .forms import ShoeForm 
+>>>>>>> c09a507ea825e346f973d2081cb1d24e8ffa8931
+=========
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .forms import ShoeForm 
+>>>>>>>>> Temporary merge branch 2
 # Create your views here.
 def home(request): 
         return render(request, 'shoeAttic/home.html ')
