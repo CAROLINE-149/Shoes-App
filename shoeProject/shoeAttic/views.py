@@ -11,7 +11,7 @@ def home(request):
 # Create your views here.
 def createShoe(request):
     form = shoeForm()
-    form = ShoeForm()
+    form = shoeForm()
     form = shoeForm()
 
     if request.method == "POST":
