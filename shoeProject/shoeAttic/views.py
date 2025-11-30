@@ -26,8 +26,8 @@ def readShoe(request):
 
 # Detail view
 def shoe_detail(request, pk):
-    shoe = Shoe.objects.get(id=pk)
-    context = {"shoe": shoe}
+    shoes = Shoe.objects.get(id=pk)
+    context = {"shoes": shoes}
     return render(request, 'shoeAttic/shoe_detail.html', context)
 
 # Update view
