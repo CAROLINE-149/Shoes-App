@@ -9,9 +9,9 @@ def home(request):
 
 # Create view
 def createShoe(request):
-    form = ShoeForm()
+    form = shoeForm()
     if request.method == "POST":
-        form = ShoeForm(request.POST)  # gets the data from what the user has input
+        form = shoeForm(request.POST)  # gets the data from what the user has input
         if form.is_valid():
             form.save()
             return redirect("readShoe")
@@ -33,10 +33,10 @@ def shoe_detail(request, pk):
 # Update view
 def updateShoe(request, pk):
     shoe = Shoe.objects.get(id=pk)
-    form = ShoeForm(instance=shoe)
+    form = shoeForm(instance=shoe)
 
     if request.method == "POST":
-        form = ShoeForm(request.POST, instance=shoe)
+        form = shoeForm(request.POST, instance=shoe)
         if form.is_valid():
             form.save()
             return redirect("readShoe")
